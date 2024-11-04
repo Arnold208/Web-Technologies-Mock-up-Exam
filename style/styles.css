@@ -1,0 +1,151 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #8dccfc;
+    margin: 0;
+    text-align: center;
+
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 3px solid #f39c12;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #f39c12;
+}
+
+main {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 40px 20px;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+#product-details {
+    flex: 2;
+    max-width: 70%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#product-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#product-gallery img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#gallery-thumbnails {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+
+    .thumbnail {
+        cursor: pointer;
+        width: 50px;
+        height: auto;
+        border: 2px solid transparent;
+        transition: border-color 0.3s ease, transform 0.2s ease;
+    }
+    
+    .thumbnail:hover {
+        border-color: #f39c12;
+        transform: scale(1.05);
+    }
+    
+    .active-thumbnail {
+        border-color: #f39c12; 
+        transform: scale(1.1); 
+    }
+    
+
+aside {
+    flex: 1;
+    max-width: 25%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        padding: 20px 10px;
+    }
+
+    #product-details {
+        max-width: 100%; 
+    }
+
+    #product-gallery img {
+        max-width: 100%; 
+    }
+
+    #gallery-thumbnails {
+        gap: 5px; 
+    }
+
+    .thumbnail {
+        width: 40px; 
+    }
+
+    aside {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+}
+}
